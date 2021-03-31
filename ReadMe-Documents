@@ -1,28 +1,42 @@
 Create Django Application
 
-django-admin startproject todo_project
+> django-admin startproject todo_project
 
 -----------------------------------------------------
 
 Run project 
 
-python manage.py runserver
+> python manage.py runserver
 
 -----------------------------------------------------
 
-pip install djangorestframework
+> pip install djangorestframework
 
 -----------------------------------------------------
 
 Create App in Django
 
-python manage.py startapp api
+> python manage.py startapp api
 
 ------------------------------------------------------
 
 Create Virtual enviroment
 
-python -m venv env
+> python -m venv env
 
 ------------------------------------------------------
 
+Create table in database
+
+models.py // write about table attribute
+
+then use commands for table migration
+
+> python manage.py makemigrations
+> python manage.py migrate
+
+-----------------------------------------------------
+
+If want to create Super User
+
+>  python manage.py createsuperuser
