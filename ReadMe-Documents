@@ -1,0 +1,28 @@
+Create Django Application
+
+django-admin startproject todo_project
+
+-----------------------------------------------------
+
+Run project 
+
+python manage.py runserver
+
+-----------------------------------------------------
+
+pip install djangorestframework
+
+-----------------------------------------------------
+
+Create App in Django
+
+python manage.py startapp api
+
+------------------------------------------------------
+
+Create Virtual enviroment
+
+python -m venv env
+
+------------------------------------------------------
+
