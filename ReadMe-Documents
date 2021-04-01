@@ -40,3 +40,7 @@ then use commands for table migration
 If want to create Super User
 
 >  python manage.py createsuperuser
+
+-----------------------------------------------------
+
+CONCLUSION : Sucessfully Done CRUD API
