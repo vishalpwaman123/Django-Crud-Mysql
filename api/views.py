@@ -31,3 +31,13 @@ def productonelist(request, pk):
     products = product.objects.get(id=pk)
     serializer = productSerializer(products, many=False)
     return Response(serializer.data)
+
+@api_view(['POST'])
+def CreateProduct(request):
+    serializer = productSerializer(data=request.data)
+
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data)
+    else:
+        return Response("Create Operation Failed")

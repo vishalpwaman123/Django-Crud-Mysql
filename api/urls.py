@@ -5,4 +5,6 @@ urlpatterns = [
     # path('', views.apiOverview, name="apiOverview"),
     path('', views.productalllist, name="productalllist"),
     path('productonelist/<int:pk>/', views.productonelist, name="productonelist"),
+    path('CreateProduct/', views.CreateProduct, name="Create-Product")
+    
 ]
