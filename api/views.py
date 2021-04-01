@@ -55,3 +55,9 @@ def UpdateProduct(request, pk):
     else:
         return Response('Update Operation Failed')
 
+
+@api_view(['DELETE'])
+def DeleteProduct(request, pk):
+    products = product.objects.get(id=pk)
+    products.delete()
+    return Response("Item Successfully Deleted")
