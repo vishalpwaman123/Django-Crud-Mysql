@@ -26,11 +26,13 @@ def productalllist(request):
     serializer = productSerializer(products, many=True)
     return Response(serializer.data)
 
+
 @api_view(['GET'])
 def productonelist(request, pk):
     products = product.objects.get(id=pk)
     serializer = productSerializer(products, many=False)
     return Response(serializer.data)
+
 
 @api_view(['POST'])
 def CreateProduct(request):
@@ -41,3 +43,15 @@ def CreateProduct(request):
         return Response(serializer.data)
     else:
         return Response("Create Operation Failed")
+
+
+@api_view(['PATCH'])
+def UpdateProduct(request, pk):
+    products = product.objects.get(id=pk)
+    serializer = productSerializer(instance=products, data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data)
+    else:
+        return Response('Update Operation Failed')
+
